@@ -1,0 +1,10 @@
+name: AllTests
+threadCount: 4
+parameters: {}
+ 
+tests:
+  - name: Regression2
+    parameters: { count: 10 }
+    packages:
+      - com.capDelivery
+
