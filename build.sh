@@ -16,6 +16,7 @@ outputBuildComment "Creating web front end distributable"
 
 outputBuildComment "Building dropwizard service"
 outputBuildComment "Copying latest library files into service lib folder"
+	[ -d ./services/lib/ ] || mkdir ./services/lib/
 	cp ./libraries/capDBDAO/target/scala-2.10/capdbdao* ./services/lib/ -v
 outputBuildComment "Assembling dropwizard service"
 	(cd ./services && exec ./sbt assembly)
