@@ -9,10 +9,10 @@ function outputBuildComment {
 }
 
 outputBuildComment "Packaging capDBADO library"
-#./sbt "project capDBDAO" clean package
+./sbt "project capDBDAO" clean package
 
 outputBuildComment "Creating web front end distributable"
-#./sbt "project webFrontEnd" clean dist
+./sbt "project webFrontEnd" clean dist
 
 outputBuildComment "Building dropwizard service"
 outputBuildComment "Copying latest library files into service lib folder"
